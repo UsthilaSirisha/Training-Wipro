@@ -1,0 +1,329 @@
+Temperature Converter:
+		Develop a temperature converter program that converts temperatures between Celsius and Fahrenheit. 
+The program should ask the user to choose the conversion type (Celsius to Fahrenheit or Fahrenheit to Celsius) and then input the temperature value. 
+Use a switch statement to handle the conversion type, and if-else statements to perform the actual conversion.
+
+
+import java.util.Scanner;
+public class TemperatureConverter {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        float temperature;
+        int choice;
+
+        System.out.println("Temperature Converter");
+        System.out.println("1. Celsius to Fahrenheit");
+        System.out.println("2. Fahrenheit to Celsius");
+        System.out.print("Enter your choice: ");
+
+        choice = scanner.nextInt();
+
+        switch (choice) {
+            case 1:
+                System.out.print("Enter temperature in Celsius: ");
+                temperature = scanner.nextFloat();
+                temperature = (temperature * 9/5f) + 32;
+                System.out.printf("%.2f Celsius is equal to %.2f Fahrenheit\n", temperature, temperature);
+                break;
+            case 2:
+                System.out.print("Enter temperature in Fahrenheit: ");
+                temperature = scanner.nextFloat();
+                temperature = (temperature - 32) * 5/9f;
+                System.out.printf("%.2f Fahrenheit is equal to %.2f Celsius\n", temperature, temperature);
+                break;
+            default:
+                System.out.println("Invalid choice!");
+        }
+        scanner.close();
+    }
+}
+
+
+
+4, Day of the Week:
+		Write a program that prompts the user to enter a number between 1 and 7 representing a day of the week (1 for Sunday, 2 for Monday, and so on). 
+Use a switch statement to determine the day entered by the user and output the corresponding day name. 
+If the user enters a number outside the range of 1-7, display an error message.
+
+
+
+ import java.util.Scanner;
+
+public class DayOfWeek {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int dayNumber;
+
+        System.out.print("Enter a number between 1 and 7 for a day of the week (1 for Sunday, 2 for Monday, etc.): ");
+        dayNumber = scanner.nextInt();
+
+        switch (dayNumber) {
+            case 1:
+                System.out.println("You entered 1 - Sunday");
+                break;
+            case 2:
+                System.out.println("You entered 2 - Monday");
+                break;
+            case 3:
+                System.out.println("You entered 3 - Tuesday");
+                break;
+            case 4:
+                System.out.println("You entered 4 - Wednesday");
+                break;
+            case 5:
+                System.out.println("You entered 5 - Thursday");
+                break;
+            case 6:
+                System.out.println("You entered 6 - Friday");
+                break;
+            case 7:
+                System.out.println("You entered 7 - Saturday");
+                break;
+            default:
+                System.out.println("Invalid input. Please enter a number between 1 and 7.");
+        }
+
+        scanner.close();
+    }
+}
+
+
+
+
+BMI Calculator:
+Create a BMI (Body Mass Index) calculator program. The program should ask the user for their weight (in kilograms) and height (in meters). 
+Then, calculate the BMI using the formula BMI = weight / (height * height). Finally, classify the BMI into categories according to the following criteria:
+Underweight: BMI < 18.5
+Normal weight: 18.5 <= BMI < 25
+Overweight: 25 <= BMI < 30
+Obese: BMI >= 30
+
+
+import java.util.Scanner;
+
+public class BMICalculator {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double weight, height, bmi;
+
+        System.out.print("Enter your weight in kilograms: ");
+        weight = scanner.nextDouble();
+
+        System.out.print("Enter your height in meters: ");
+        height = scanner.nextDouble();
+
+        bmi = weight / (height * height);
+
+        System.out.printf("Your BMI is %.2f\n", bmi);
+
+        if (bmi < 18.5) {
+            System.out.println("BMI Category: Underweight");
+        } else if (bmi >= 18.5 && bmi < 25) {
+            System.out.println("BMI Category: Normal weight");
+        } else if (bmi >= 25 && bmi < 30) {
+            System.out.println("BMI Category: Overweight");
+        } else {
+            System.out.println("BMI Category: Obese");
+        }
+
+        scanner.close();
+    }
+}
+
+
+
+
+
+Factorial Calculator:
+	Write a program that calculates the factorial of a given number using a loop. 
+The factorial of a non-negative integer n is denoted by n! and is the product of all positive integers less than or equal to n. 
+For example, 5! = 5 × 4 × 3 × 2 × 1 = 120. Prompt the user to enter a number, then use a loop to calculate and output its factorial.
+
+
+import java.util.Scanner;
+
+public class FactorialCalculator {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int number, factorial = 1;
+
+        System.out.print("Enter a non-negative number: ");
+        number = scanner.nextInt();
+
+        if (number < 0) {
+            System.out.println("Error: Factorial is not defined for negative numbers.");
+        } else {
+            for (int i = 1; i <= number; i++) {
+                factorial *= i;
+            }
+            System.out.println("The factorial of " + number + " is " + factorial);
+        }
+
+        scanner.close();
+    }
+}
+
+
+
+
+
+
+
+Number Guessing Game:
+	Develop a number guessing game where the program randomly generates a number between 1 and 100. 
+The user has to guess the number, and the program provides feedback (higher, lower, or correct) after each guess. 
+Use a loop to allow the user to keep guessing until they correctly guess the number.
+
+
+import java.util.Random;
+import java.util.Scanner;
+
+public class NumberGuessingGame {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        Random random = new Random();
+
+        int randomNumber = random.nextInt(100) + 1; // Generate random number between 1 and 100 (inclusive)
+        int guess, attempts = 0;
+
+        System.out.println("Guess the number between 1 and 100 (inclusive).");
+
+        do {
+            attempts++;
+            System.out.print("Enter your guess: ");
+            guess = scanner.nextInt();
+
+            if (guess < randomNumber) {
+                System.out.println("Too low. Try again.");
+            } else if (guess > randomNumber) {
+                System.out.println("Too high. Try again.");
+            }
+        } while (guess != randomNumber);
+
+        System.out.println("Congratulations! You guessed the number in " + attempts + " attempts.");
+
+        scanner.close();
+    }
+}
+
+
+
+
+Prime Number Generator:
+		Create a program that generates and displays all prime numbers within a specified range (e.g., between 1 and 100). 
+Use nested loops to iterate through each number in the range and determine if it's a prime number. 
+A prime number is a whole number greater than 1 that has no positive divisors other than 1 and itself.
+
+ public class PrimeNumberGenerator {
+
+    public static void main(String[] args) {
+        int lower, upper;
+
+        System.out.print("Enter the lower limit: ");
+        lower = Integer.parseInt(System.console().readLine());
+        System.out.print("Enter the upper limit (must be greater than lower limit): ");
+        upper = Integer.parseInt(System.console().readLine());
+
+        System.out.println("Prime numbers between " + lower + " and " + upper + " are: ");
+
+        for (int number = lower; number <= upper; number++) {
+            int count = 0;
+            if (number >= 2) {
+                for (int i = 1; i <= number; i++) {
+                    if (number % i == 0) {
+                        count++;
+                    }
+                }
+                if (count == 2) {
+                    System.out.print(number + " ");
+                }
+            }
+        }
+        System.out.println();
+    }
+}
+
+
+
+
+
+Fibonacci Sequence Generator:
+		Write a program to generate the Fibonacci sequence up to a specified number of terms. 
+The Fibonacci sequence starts with 0 and 1, and each subsequent number is the sum of the two preceding numbers (0, 1, 1, 2, 3, 5, 8, 13, ...). 
+Prompt the user to enter the number of terms they want to generate and use a loop to calculate and output the sequence.
+
+
+import java.util.Scanner;
+
+public class FibonacciSequenceGenerator {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int number, a = 0, b = 1, c;
+
+        System.out.print("Enter the number of terms you want in the Fibonacci sequence: ");
+        number = scanner.nextInt();
+
+        System.out.print("Fibonacci Series: ");
+        for (int i = 1; i <= number; i++) {
+            System.out.print(a + " ");
+            c = a + b;
+            a = b;
+            b = c;
+        }
+        System.out.println();
+
+        scanner.close();
+    }
+}
+
+
+
+
+
+
+
+Palindrome Checker:
+		Develop a program that checks whether a given string is a palindrome or not.
+A palindrome is a word, phrase, number, or other sequence of characters that reads the same backward as forward (e.g., "radar" or "madam").
+Prompt the user to enter a string, then use a loop to compare characters from the beginning and end of the string to determine if it's a palindrome.
+
+
+public class PalindromeChecker {
+    public static void main(String[] args) {
+        System.out.println("Enter a string to check if it's a palindrome:");
+        String input = new Scanner(System.in).nextLine();
+
+        if (isPalindrome(input)) {
+            System.out.println(input + " is a palindrome.");
+        } else {
+            System.out.println(input + " is not a palindrome.");
+        }
+    }
+
+    public static boolean isPalindrome(String s) {
+        int leftIndex = 0;
+        int rightIndex = s.length() - 1;
+
+        while (leftIndex < rightIndex) {
+            if (s.charAt(leftIndex) != s.charAt(rightIndex)) {
+                return false;
+            }
+            leftIndex++;
+            rightIndex--;
+        }
+
+        return true;
+    }
+}
+
+
+
+
+
+

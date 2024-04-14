@@ -1,0 +1,21 @@
+function calculate_and_output(number)
+
+  loop forever 
+    get number as input
+
+    if number is not a number
+      print "Invalid input. Please enter a number."
+      continue 
+    end if
+
+    if number is even  
+      result = number * number  
+    else
+      result = number * number * number 
+    end if
+
+    print "The result is:", result
+    
+    break  
+  end loop
+end function

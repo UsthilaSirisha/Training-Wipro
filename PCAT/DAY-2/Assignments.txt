@@ -1,0 +1,193 @@
+Voting Eligibility Checker:
+   Create a program that determines whether a person is eligible to vote in an election based on the following criteria:
+Age must be 18 or above.
+Must be a citizen of the country.
+Prompt the user to input their age, citizenship status (yes/no), and felony status (yes/no), 
+and then use complex logical expressions to determine and output whether they are eligible to vote.
+
+
+import java.util.Scanner;
+
+public class VotingEligibilityChecker {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int age;
+        String isCitizen, hasFelony;
+
+        System.out.print("Enter your age: ");
+        age = scanner.nextInt();
+        System.out.print("Are you a citizen of the country (yes/no)? ");
+        isCitizen = scanner.next();
+        System.out.print("Do you have any felony convictions (yes/no)? ");
+        hasFelony = scanner.next();
+
+        if (age >= 18 && isCitizen.equalsIgnoreCase("yes") && !hasFelony.equalsIgnoreCase("yes")) {
+            System.out.println("You are eligible to vote.");
+        } else {
+            System.out.println("You are not eligible to vote.");
+        }
+
+        scanner.close();
+    }
+}
+
+
+
+
+
+
+
+Credit Card Approval System:
+		Design a program that evaluates whether a person is approved for a credit card based on the following criteria:
+Minimum credit score requirement: 700
+Maximum debt-to-income ratio: 30%
+No recent bankruptcies (within the last 5 years)
+Prompt the user to input their credit score, debt amount, income amount, and bankruptcy status,
+then use complex logical expressions to determine and output whether they are approved for the credit card.
+
+
+import java.util.Scanner;
+
+public class CreditCardApprovalSystem {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int creditScore, debtAmount, income;
+        String hasBankruptcy;
+
+        System.out.print("Enter your credit score: ");
+        creditScore = scanner.nextInt();
+        System.out.print("Enter your total debt amount: ");
+        debtAmount = scanner.nextInt();
+        System.out.print("Enter your annual income: ");
+        income = scanner.nextInt();
+        System.out.print("Have you filed for bankruptcy in the last 5 years (yes/no)? ");
+        hasBankruptcy = scanner.next();
+
+        double debtToIncomeRatio = ((double) debtAmount / income) * 100;
+
+        if (creditScore >= 700 && debtToIncomeRatio <= 30 && !hasBankruptcy.equalsIgnoreCase("yes")) {
+            System.out.println("Congratulations! You are approved for a credit card.");
+        } else {
+            System.out.println("Unfortunately, you are not approved for a credit card at this time.");
+        }
+
+        scanner.close();
+    }
+}
+
+
+
+
+
+
+Employee Promotion Criteria:
+Develop a program that assesses whether an employee is eligible for a promotion based on the following criteria:
+Must have worked for the company for at least 5 years.
+Must have a performance rating of "excellent."
+Must have completed at least one advanced training program.
+Prompt the user to input their years of service, performance rating, and training status, 
+then use complex logical expressions to determine and output whether they are eligible for promotion.
+
+
+import java.util.Scanner;
+
+public class EmployeePromotionCriteria {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int yearsOfService;
+        String performanceRating, hasTraining;
+
+        System.out.print("Enter your years of service with the company: ");
+        yearsOfService = scanner.nextInt();
+        System.out.print("Enter your performance rating (excellent/average/below average): ");
+        performanceRating = scanner.next();
+        System.out.print("Have you completed at least one advanced training program (yes/no)? ");
+        hasTraining = scanner.next();
+
+        if (yearsOfService >= 5 && performanceRating.equalsIgnoreCase("excellent") && hasTraining.equalsIgnoreCase("yes")) {
+            System.out.println("Congratulations! You are eligible for a promotion.");
+        } else {
+            System.out.println("You are not currently eligible for a promotion.");
+        }
+
+        scanner.close();
+    }
+}
+
+
+
+
+
+
+Product Discount Calculator:
+Write a program that calculates the discount amount for a product based on the following criteria:
+If the product price is over $100 and the customer is a premium member, they get a 20% discount.
+If the product price is over $100 and the customer is not a premium member, they get a 10% discount.
+If the product price is $100 or less, there is no discount.
+Prompt the user to input the product price and their premium membership status, then use complex logical expressions to calculate and output the discount amount.
+
+import java.util.Scanner;
+
+public class ProductDiscountCalculator {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        double price;
+        String isPremiumMember;
+
+        System.out.print("Enter the product price: ");
+        price = scanner.nextDouble();
+        System.out.print("Are you a premium member (yes/no)? ");
+        isPremiumMember = scanner.next();
+
+        double discount = 0;
+        if (price > 100) {
+            discount = isPremiumMember.equalsIgnoreCase("yes") ? price * 0.2 : price * 0.1;
+        }
+
+        System.out.println("The discount amount is: $" + discount);
+
+        scanner.close();
+    }
+}
+
+
+
+
+
+Health Insurance Plan Eligibility:
+	Design a program that determines whether a person is eligible for a particular health insurance plan based on the following criteria:
+Age must be between 18 and 65.
+Must not have any pre-existing medical conditions.
+Must not have any recent hospitalizations (within the last 6 months).
+Prompt the user to input their age, medical condition status, and hospitalization status, 
+then use complex logical expressions to determine and output whether they are eligible for the insurance plan.
+
+import java.util.Scanner;
+
+public class HealthInsurancePlanEligibility {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        int age;
+        String hasPreExistingCondition, hasRecentHospitalization;
+
+        System.out.print("Enter your age: ");
+        age = scanner.nextInt();
+        System.out.print("Do you have any pre-existing medical conditions (yes/no)? ");
+        hasPreExistingCondition = scanner.next();
+        System.out.print("Have you had any recent hospitalizations (within the last 6 months) (yes/no)? ");
+        hasRecentHospitalization = scanner.next();
+
+        if (age >= 18 && age <= 65 && !hasPreExistingCondition.equalsIgnoreCase("yes") && !hasRecentHospitalization.equalsIgnoreCase("yes")) {
+            System.out.println("You are eligible for the health insurance plan.");
+        } else {
+            System.out.println("You are not eligible for the health insurance plan at this time.");
+        }
+
+        scanner.close();
+    }
+}

@@ -1,0 +1,95 @@
+Pseudocode and Flowchart for Sorting Algorithm - Write pseudocode and create a flowchart for a bubble sort algorithm. Provide a brief explanation of how the algorithm works and a simple array of integers to demonstrate a dry run of your algorithm.
+
+Pseudocode :
+
+function bubbleSort(arr, n)
+  swapped = false
+  for i = 1 to n-1  
+    for j = 0 to n-i-1  
+      if arr[j] > arr[j+1]
+        temp = arr[j]
+        arr[j] = arr[j+1]
+        arr[j+1] = temp
+        swapped = true 
+    end if
+  end for
+  
+  if not swapped  
+    return  
+  end if
+end function
+
+Flow chart :
+
+Lucid chart Link :
+
+https://lucid.app/lucidchart/9e3af66c-ce5f-48c9-b307-4d44a9602aba/edit?viewport_loc=-153%2C-255%2C1707%2C800%2CpttsOoaAkofs&invitationId=inv_261a40ee-7306-4a69-a885-d1a7fcd2270c
+
+ 
+
+
+Explanation :
+
+1. Set N = Length of Array
+
+2. Array[j] > Array[j + 1] (Decision)
+
+if no - continue with the step 4
+3. Swap Array[j] and Array[j+1]
+
+4. Increment j (j++)
+
+5. j < N - i - 1 (Decision)
+
+if yes - continue with the step 2
+6. Clear j (j = 0)
+
+7. Increment i (i++)
+
+8. i < N - 1 (Decision)
+
+if yes continue with the step 2
+9. Ordered Array
+
+Dry run of bubble sort algorithm:
+
+Unsorted array:[ 41, 54, 49, 96, 30]
+
+
+
+Pass	 Outer Loop (i)	Inner Loop (j)	Comparison	Array After Swap
+1		1	0		41 vs 54	54, 41, 49, 96, 30
+			1		54 vs 49	54, 41, 49, 96, 30
+			2		54 vs 96	54, 41, 49, 96, 30
+			3		54 vs 30	54, 41, 49, 96, 30
+2		2	0		54 vs 41	41, 54, 49, 96, 30
+			1		41 vs 49	41, 54, 49, 96, 30
+			2		41 vs 96	41, 54, 49, 96, 30
+3		3	0		41 vs 54	41, 54, 49, 96, 30
+4		-	-		-		30, 41, 49, 54, 96
+
+
+
+Sorted: 30, 41, 49, 54, 96
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,57 @@
+Recursive Function and Efficiency Analysis - 
+Write a recursive function pseudocode and calculate the nth 
+Fibonacci number and use Big O notation to analyze its efficiency. 
+Compare this with an iterative approach and 
+discuss the pros and cons in terms of space and time complexity.
+
+function fibonacci(number)
+
+  if number < 0 
+    print "Error: Fibonacci sequence is not defined for negative numbers."
+    return -1  
+  end if
+
+  if number == 0  
+    return 0
+  end if
+
+  if number == 1  
+    return 1
+  end if
+
+  
+  nMinus1 = fibonacci(number - 1)
+  nMinus2 = fibonacci(number - 2)
+  
+  return nMinus1 + nMinus2
+end function
+
+
+Iterative Approach
+
+function fibonacci(number)
+
+  if number < 0  
+    print "Error: Fibonacci sequence is not defined for negative numbers."
+    return -1  
+  end if
+
+  a = 0  
+  b = 1  
+  
+  for i = 2 to number  
+    c = a + b
+    a = b
+    b = c
+  end loop
+
+  if number == 0  
+    return a
+  end if
+
+  return b  
+end function
+
+
+Feature		Recursive Approach	Iterative Approach
+Time Complexity		O(2^n)			O(n)

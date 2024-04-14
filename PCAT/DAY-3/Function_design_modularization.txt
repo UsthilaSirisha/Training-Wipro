@@ -1,0 +1,71 @@
+Function Design and Modularization - Create a document that describes the design of two modular functions: 
+one that returns the factorial of a number, and another that calculates the nth Fibonacci number. 
+Include pseudocode and a brief explanation of how modularity in programming helps with code reuse and organization.
+
+
+Pseudocode:
+
+function calculateFactorial(number)
+
+  if number < 0  
+    print "Error: Factorial is not defined for negative numbers."
+    return -1  
+  end if
+
+  if number == 0  
+    return 1
+  end if
+
+  factorial = 1
+  for i = 1 to number  
+    factorial = factorial * i
+  end loop
+
+  return factorial
+end function
+
+
+Explanation:
+
+1.The function checks for invalid input (negative number) and returns an error message (optional).
+2.It handles the base case where the factorial of 0 is 1.
+3.It initializes a variable factorial to 1 and uses a loop to iterate from 1 to number.
+4.Inside the loop, it multiplies the current factorial value by i (the loop counter).
+5.After the loop, the calculated factorial value is returned.
+
+
+Function 2: fibonacci(number)
+
+Pseudocode:
+
+function fibonacci(number)
+
+  if number < 0  
+    print "Error: Fibonacci sequence is not defined for negative numbers."
+    return -1  
+  end if
+
+  if number == 0  
+    return 0
+  end if
+
+  if number == 1  
+    return 1
+  end if
+
+ 
+  nMinus1 = fibonacci(number - 1)
+  nMinus2 = fibonacci(number - 2)
+  
+  return nMinus1 + nMinus2
+end function
+
+
+Explanation:
+
+1.The function checks for invalid input (negative number) and returns an error message (optional).
+2.It handles the base cases for the first two Fibonacci numbers (0 and 1).
+3.For other cases, it uses recursion. It calls itself twice with number - 1 and number - 2 to get the (n-1)th and (n-2)th Fibonacci numbers.
+4.It returns the sum of the recursive calls, which represents the nth Fibonacci number.
+
+These modular functions demonstrate the benefits of code reusability and organization. They can be easily integrated into other programs that require factorial or Fibonacci calculations.
