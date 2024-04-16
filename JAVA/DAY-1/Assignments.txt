@@ -1,0 +1,99 @@
+// Task 1: Data Types/Variables
+public class Task1 {
+    public static void main(String[] args) {
+        int a = 5;
+        int b = 10;
+
+        System.out.println("Before swapping: a = " + a + ", b = " + b);
+
+        a = a + b; // a now holds the sum of a and b
+        b = a - b; // b now holds the difference between the sum and the original value of b
+        a = a - b; // a now holds the original value of a
+
+        System.out.println("After swapping: a = " + a + ", b = " + b);
+    }
+}
+
+// Task 2: Operators
+public class Task2 {
+    public static void main(String[] args) {
+        if (args.length == 3) {
+            int num1 = Integer.parseInt(args[0]);
+            int num2 = Integer.parseInt(args[1]);
+            char operator = args[2].charAt(0);
+
+            switch (operator) {
+                case '+':
+                    System.out.println(num1 + num2);
+                    break;
+                case '-':
+                    System.out.println(num1 - num2);
+                    break;
+                case '*':
+                    System.out.println(num1 * num2);
+                    break;
+                case '/':
+                    if (num2 != 0) {
+                        System.out.println((double) num1 / num2);
+                    } else {
+                        System.out.println("Error: Division by zero");
+                    }
+                    break;
+                default:
+                    System.out.println("Error: Invalid operator. Use +, -, *, or /");
+            }
+        } else {
+            System.out.println("Usage: java Task2 <number1> <number2> <operator>");
+        }
+    }
+}
+
+// Task 3: Control Flow
+public class Task3 {
+    public static void main(String[] args) {
+        if (args.length == 1) {
+            int num = Integer.parseInt(args[0]);
+            boolean isPrime = true;
+
+            if (num <= 1) {
+                isPrime = false;
+            } else {
+                for (int i = 2; i <= num / 2; i++) {
+                    if (num % i == 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+            }
+
+            if (isPrime) {
+                System.out.println(num + " is a prime number.");
+            } else {
+                System.out.println(num + " is not a prime number.");
+            }
+        } else {
+            System.out.println("Usage: java Task3 <integer>");
+        }
+    }
+}
+
+// Task 4: Arrays - Declaration, Initialization, and Usage
+public class Task4 {
+    public static void main(String[] args) {
+        int[] arr = new int[5];
+
+        for (int i = 0; i < arr.length; i++) {
+            arr[i] = i + 1;
+        }
+
+        System.out.println("Original array:");
+        for (int num : arr) {
+            System.out.print(num + " ");
+        }
+
+        System.out.println("\n\nReversed array:");
+        for (int i = arr.length - 1; i >= 0; i--) {
+            System.out.print(arr[i] + " ");
+        }
+    }
+}
