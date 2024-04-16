@@ -1,4 +1,4 @@
-// Task 1: Data Types/Variables
+Task 1: Data Types/Variables
 public class Task1 {
     public static void main(String[] args) {
         int a = 5;
@@ -6,15 +6,16 @@ public class Task1 {
 
         System.out.println("Before swapping: a = " + a + ", b = " + b);
 
-        a = a + b; // a now holds the sum of a and b
-        b = a - b; // b now holds the difference between the sum and the original value of b
-        a = a - b; // a now holds the original value of a
+        a = a + b; 
+        b = a - b; 
+        a = a - b; 
 
         System.out.println("After swapping: a = " + a + ", b = " + b);
     }
 }
 
-// Task 2: Operators
+
+Task 2: Operators
 public class Task2 {
     public static void main(String[] args) {
         if (args.length == 3) {
@@ -48,7 +49,7 @@ public class Task2 {
     }
 }
 
-// Task 3: Control Flow
+Task 3: Control Flow
 public class Task3 {
     public static void main(String[] args) {
         if (args.length == 1) {
@@ -77,7 +78,7 @@ public class Task3 {
     }
 }
 
-// Task 4: Arrays - Declaration, Initialization, and Usage
+Task 4: Arrays - Declaration, Initialization, and Usage
 public class Task4 {
     public static void main(String[] args) {
         int[] arr = new int[5];
