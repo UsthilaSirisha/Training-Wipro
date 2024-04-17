@@ -1,0 +1,29 @@
+write a function named perform linear search that searchs for a specific element if found 
+or -1 if not found
+
+
+
+public static int performLinearSearch(int[] arr, int target) {
+  for (int i = 0; i < arr.length; i++) {
+    if (arr[i] == target) {
+      return i;
+    }
+  }
+  return -1;
+}
+
+
+
+
+create a recursive function to find the nth element of a fibonacci sequence and store the
+ first n elements in an array.
+
+
+
+public static int fibonacciRecursive(int n) {
+  if (n <= 1) {
+    return n;
+  } else {
+    return fibonacciRecursive(n - 1) + fibonacciRecursive(n - 2);
+  }
+}
