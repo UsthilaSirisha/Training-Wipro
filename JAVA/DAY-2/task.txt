@@ -26,6 +26,8 @@ public class TwoSum {
 }
 
 
+
+
 Task 6: Understanding Functions through Arrays
 a) Write a recursive function named SumArray that calculates and returns the sum of elements in an array, demonstarte with example.
  
