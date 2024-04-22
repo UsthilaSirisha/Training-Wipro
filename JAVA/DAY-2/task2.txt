@@ -14,7 +14,7 @@ public class Matrix {
         this.matrix = new int[rows][columns];
     }
 
-    // Method to fill the matrix with values
+   
     public void fillMatrix(int[][] values) {
         if (values.length != rows || values[0].length != columns) {
             System.out.println("Invalid dimensions for input values. Matrix not filled.");
