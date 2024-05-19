@@ -1,0 +1,40 @@
+Assignment 1: Draw your Home Network Topology and explain how you are accessing the RPS Lab environment.
+Network Topology in which all the devices or nodes are physically connected to a central node such as a router,switch,
+or hub.
+A switch can also be utilised as a central device instead of hub. 
+ 
+Assignment 2: Identify a real-world application for both parallel computing and networked systems. 
+Explain how these technologies are used and why they are important in that context.
+
+Weather forecasting is a prime example of a real-world application that relies heavily on both
+ parallel computing and networked systems. Let's delve into how these technologies work together:
+
+1. Networked Systems:
+Data Collection: A vast network of weather stations, satellites, radar systems, and buoys spread 
+across the globe continuously gathers atmospheric data like temperature, pressure, humidity,
+ and wind speed.
+Data Sharing: This data is transmitted over communication networks to central processing
+ centers. Networked systems ensure the efficient and timely flow of this critical information.
+2. Parallel Computing:
+Massive Datasets: Weather forecasting models involve complex calculations using enormous
+ datasets. Parallel computing comes into play here.
+Breaking Down the Work: The data is divided and distributed across multiple processors 
+within a supercomputer or a network of computers working together. Each processor
+ performs calculations on a portion of the data simultaneously.
+Faster Simulations: This parallel processing significantly reduces the time required to run
+ weather simulations, allowing for quicker and more up-to-date forecasts.
+Importance of This Combination:
+
+Accuracy: The faster processing speeds enabled by parallel computing allow for more complex
+ and detailed simulations, leading to more accurate forecasts.
+Timeliness: Timely weather information is crucial for various sectors like agriculture, aviation, 
+and disaster preparedness. Networked systems ensure the rapid collection and processing of 
+data, enabling real-time forecasts.
+Scalability: As weather data collection continues to grow, networked systems and parallel 
+computing can be scaled up by adding more processing power or data collection points to handle the 
+increasing demands.
+In conclusion, weather forecasting exemplifies the power of combining networked systems and
+ parallel computing. Networked systems ensure the collection and sharing of vast amounts of data,
+ while parallel computing allows for the rapid processing of this data to generate accurate and 
+timely weather forecasts. This fusion of technologies plays a vital role in our everyday lives and 
+various critical industries.
